@@ -16,9 +16,9 @@ const App: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-teal-50 rounded-full blur-[140px] -z-10 -translate-x-1/4 translate-y-1/4"></div>
 
         <div className="max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 animate-fade-in">
             <div>
-              <span className="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-6 animate-fade-in">
+              <span className="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-6">
                 Available for new opportunities
               </span>
               <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight">
@@ -63,16 +63,16 @@ const App: React.FC = () => {
           </div>
 
           <div className="relative hidden lg:block">
-            <div className="w-full aspect-square rounded-3xl bg-slate-100 overflow-hidden shadow-2xl relative rotate-3 group hover:rotate-0 transition-transform duration-700">
+            <div className="w-full aspect-[4/5] rounded-[2.5rem] bg-slate-100 overflow-hidden shadow-2xl relative group transition-all duration-700 hover:shadow-brand/10">
               <img 
-                src="https://picsum.photos/seed/productowner/800/800" 
-                alt="Profile Placeholder" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1288&auto=format&fit=crop" 
+                alt="Masechaba Khoza" 
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-brand/10 group-hover:bg-transparent transition-all"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60 group-hover:opacity-30 transition-all"></div>
             </div>
             {/* Float Badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 animate-bounce transition-all">
+            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 animate-bounce transition-all z-20">
                 <div className="flex items-center gap-3">
                   <div className="bg-brand/10 p-2 rounded-full text-brand">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ const App: React.FC = () => {
                 Specialized in leveraging data insights to optimize user experiences and streamline complex business processes.
               </p>
               
-              <div className="space-y-6">
+              <div className="grid gap-6">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm border border-brand-100 flex items-center justify-center text-brand">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,6 +127,19 @@ const App: React.FC = () => {
                     <h4 className="font-bold text-slate-900">Certification</h4>
                     <p className="text-slate-600">Certified Scrum Product Owner (CSPO)</p>
                     <p className="text-sm text-slate-400">Scrum Alliance</p>
+                  </div>
+                </div>
+
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm border border-brand-100 flex items-center justify-center text-brand">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Data & Analytics</h4>
+                    <p className="text-slate-600">Google Analytics Certification</p>
+                    <p className="text-sm text-slate-400">Google</p>
                   </div>
                 </div>
               </div>
