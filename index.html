@@ -9,38 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0f9fa',
-                            100: '#dcf0f2',
-                            200: '#bee1e5',
-                            300: '#93c9d1',
-                            400: '#61a8b5',
-                            500: '#468b99',
-                            600: '#3c727f',
-                            700: '#365e69',
-                            800: '#324f58',
-                            900: '#2d444c',
-                            DEFAULT: '#007b8f'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #fdf8f5; }
         .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(253, 248, 245, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+        }
+        .project-title-template {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.02em;
         }
     </style>
 <script type="importmap">
@@ -52,9 +32,11 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
 </body>
 </html>

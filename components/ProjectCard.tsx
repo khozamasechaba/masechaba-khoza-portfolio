@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -8,47 +9,34 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full">
-      <div className="p-1 bg-gradient-to-r from-brand-200 to-brand-400 opacity-20 group-hover:opacity-100 transition-opacity"></div>
-      <div className="p-8 flex flex-col flex-grow">
-        <div className="flex justify-between items-start mb-4">
-          <span className="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-wider">
-            {project.company}
-          </span>
-          <div className="text-brand-300 group-hover:text-brand-500 transition-colors">
-             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-             </svg>
-          </div>
-        </div>
-        
-        <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-brand-700 transition-colors">
+    <div className="group flex flex-col space-y-4">
+      <div className="aspect-square overflow-hidden rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] group-hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)] transition-all duration-300">
+        <img 
+          src={project.previewImage} 
+          alt={project.title} 
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+      
+      <div className="space-y-2">
+        <p className="text-sm font-bold text-brand uppercase tracking-wider">
+          {project.company}
+        </p>
+        <h3 className="text-3xl font-extrabold text-slate-900 leading-tight">
           {project.title}
         </h3>
-
-        <div className="space-y-4 mb-6">
-          <div>
-            <p className="text-xs font-bold text-slate-400 uppercase mb-1">Challenge</p>
-            <p className="text-slate-600 text-sm italic">"{project.challenge}"</p>
-          </div>
-          <div>
-            <p className="text-xs font-bold text-slate-400 uppercase mb-1">Solution</p>
-            <p className="text-slate-700 text-sm">{project.solution}</p>
-          </div>
-          <div className="bg-emerald-50 p-3 rounded-lg border border-emerald-100">
-            <p className="text-xs font-bold text-emerald-700 uppercase mb-1">Impact</p>
-            <p className="text-emerald-800 font-semibold text-sm">{project.impact}</p>
-          </div>
-        </div>
-
-        <div className="mt-auto flex flex-wrap gap-2 pt-4 border-t border-slate-50">
-          {project.tags.map(tag => (
-            <span key={tag} className="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-medium">
-              {tag}
-            </span>
-          ))}
-        </div>
+        <p className="text-slate-600 text-lg line-clamp-2">
+          {project.summary}
+        </p>
       </div>
+
+      <Link 
+        to={`/project/${project.id}`}
+        className="inline-flex items-center justify-center bg-brand text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-700 transition-all active:scale-95 w-fit"
+      >
+        View Project
+      </Link>
     </div>
   );
 };
