@@ -290,11 +290,11 @@ const HomePage: React.FC = () => {
             Whether you have a project in mind or just want to say hi, I'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            <a href="mailto:masechaba.c.khoza@gmail.com" className="flex items-center gap-3 text-2xl font-bold hover:text-brand transition-colors">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=masechaba.c.khoza@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-brand transition-colors">
               <Mail className="w-8 h-8" />
               Email Me
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-brand transition-colors">
+            <a href="https://www.linkedin.com/in/masechabakhoza/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-2xl font-bold hover:text-brand transition-colors">
               <Linkedin className="w-8 h-8" />
               LinkedIn
             </a>
