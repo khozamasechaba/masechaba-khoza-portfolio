@@ -30,18 +30,18 @@ const HomePage: React.FC = () => {
             className="space-y-10"
           >
             <div className="space-y-6">
-              <p className="text-3xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.1] font-bold tracking-tight max-w-2xl">
+              <p className="text-2xl md:text-4xl lg:text-5xl text-slate-900 leading-[1.2] font-bold tracking-tight max-w-2xl">
                 Hi, I am Masechaba. <br />
                 <span className="text-brand">I drive measurable impact</span> through data-driven product decisions.
               </p>
-              <p className="text-lg md:text-xl text-slate-600 font-medium italic">
+              <p className="text-base md:text-lg text-slate-600 font-medium italic">
                 Product Owner
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-6">
                 <a 
                   href="#work" 
-                  className="bg-brand text-white px-8 md:px-10 py-4 rounded-2xl font-bold text-center hover:bg-brand-700 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:scale-95 text-lg md:text-xl"
+                  className="bg-brand text-white px-8 md:px-10 py-4 rounded-2xl font-bold text-center hover:bg-brand-800 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:scale-95 text-lg md:text-xl"
                 >
                   View Projects
                 </a>
@@ -91,7 +91,7 @@ const HomePage: React.FC = () => {
             </div>
             <Link 
               to="/all-projects" 
-              className="inline-flex items-center gap-2 text-lg md:text-xl font-bold text-brand hover:text-brand-700 transition-colors group"
+              className="inline-flex items-center gap-2 text-lg md:text-xl font-bold text-slate-900 hover:text-brand transition-colors group"
             >
               View All Projects
               <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -124,7 +124,7 @@ const HomePage: React.FC = () => {
                     <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-1">
                       <h3 className="text-3xl md:text-4xl font-black text-slate-900">{exp.company}</h3>
                       {exp.isPassionProject && (
-                        <span className="px-3 py-1 bg-brand-100 text-brand-700 text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full border border-brand-200">
+                        <span className="px-3 py-1 bg-brand-100 text-brand-800 text-[10px] md:text-xs font-black uppercase tracking-widest rounded-full border border-brand-200">
                           Passion Project
                         </span>
                       )}
@@ -141,7 +141,7 @@ const HomePage: React.FC = () => {
                     <p className="text-base md:text-lg text-slate-600 leading-relaxed">{exp.description}</p>
                   </div>
                   <div className="bg-brand-50 p-6 rounded-2xl border-2 border-brand-200">
-                    <p className="text-[10px] md:text-xs font-bold text-brand-700 uppercase mb-2 tracking-widest">Focus Area</p>
+                    <p className="text-[10px] md:text-xs font-bold text-brand-800 uppercase mb-2 tracking-widest">Focus Area</p>
                     <p className="text-brand-900 font-bold">{exp.focusArea}</p>
                   </div>
                 </div>

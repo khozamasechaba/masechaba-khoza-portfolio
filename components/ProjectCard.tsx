@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group flex flex-col space-y-4">
+    <div className="group flex flex-col h-full space-y-4">
       <div className="aspect-square overflow-hidden rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] group-hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.4)] transition-all duration-300">
         <img 
           src={project.previewImage} 
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         />
       </div>
       
-      <div className="space-y-2">
+      <div className="flex-grow space-y-2">
         <p className="text-sm font-bold text-brand uppercase tracking-wider">
           {project.company}
         </p>
@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       <Link 
         to={`/project/${project.id}`}
-        className="inline-flex items-center justify-center bg-brand text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-700 transition-all active:scale-95 w-fit"
+        className="inline-flex items-center justify-center bg-brand text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-700 transition-all active:scale-95 w-fit mt-auto"
       >
         View Project
       </Link>
