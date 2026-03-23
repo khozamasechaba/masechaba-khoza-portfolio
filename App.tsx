@@ -24,28 +24,21 @@ const HomePage: React.FC = () => {
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-20 w-full grid lg:grid-cols-2 gap-20 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-12"
+            className="space-y-10"
           >
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl lg:text-9xl font-extrabold text-slate-900 leading-none tracking-tighter">
-                Masechaba <br />
-                <span className="text-brand">Khoza</span>
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl font-medium text-slate-600 italic">
+            <div className="space-y-6">
+              <p className="text-3xl md:text-5xl lg:text-6xl text-slate-900 leading-[1.1] font-bold tracking-tight max-w-2xl">
+                Hi, I am Masechaba. <br />
+                <span className="text-brand">I drive measurable impact</span> through data-driven product decisions.
+              </p>
+              <p className="text-lg md:text-xl text-slate-600 font-medium italic">
                 Product Owner
               </p>
-            </div>
-            
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl lg:text-3xl text-slate-800 leading-tight font-medium max-w-xl">
-                Hi, I am Masechaba. <br />
-                <span className="text-brand-700">I drive measurable impact</span> through data-driven product decisions.
-              </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-6">
                 <a 
                   href="#work" 
                   className="bg-brand text-white px-8 md:px-10 py-4 rounded-2xl font-bold text-center hover:bg-brand-700 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:scale-95 text-lg md:text-xl"
