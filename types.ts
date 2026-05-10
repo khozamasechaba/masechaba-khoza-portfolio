@@ -10,14 +10,13 @@ export interface Project {
   solution: string;
   implementation: string;
   results: string;
+  icon: string;
   artifacts: {
     type: 'process-flow' | 'sketch' | 'wireframe' | 'dashboard' | 'analysis' | 'other';
-    imageUrl: string;
     label: string;
   }[];
   backlog: string[];
   link?: string;
-  previewImage: string;
   tags: string[];
 }
 
@@ -47,5 +46,5 @@ export interface Certification {
 export interface JoyItem {
   title: string;
   description: string;
-  imageUrl?: string;
+  icon: string;
 }

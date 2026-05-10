@@ -7,7 +7,14 @@ import ProjectDetail from './components/ProjectDetail';
 import AllProjectsPage from './components/AllProjectsPage';
 import { PROJECTS, EXPERIENCE, SKILLS, JOY, CERTIFICATIONS } from './constants';
 import { motion } from 'motion/react';
-import { Mail, Linkedin, Briefcase, Heart, User, Award, ChevronRight } from 'lucide-react';
+import { Mail, Linkedin, Briefcase, Heart, User, Award, ChevronRight, Mic, Shirt, Gamepad, Coffee } from 'lucide-react';
+
+const iconMap: Record<string, React.ReactNode> = {
+  Mic: <Mic className="w-10 h-10 text-brand" />,
+  Shirt: <Shirt className="w-10 h-10 text-brand" />,
+  Gamepad: <Gamepad className="w-10 h-10 text-brand" />,
+  Coffee: <Coffee className="w-10 h-10 text-brand" />,
+};
 
 const HomePage: React.FC = () => {
   // Hand-picked featured projects for a diverse showcase
@@ -49,7 +56,7 @@ const HomePage: React.FC = () => {
                   href="#contact" 
                   className="bg-white text-slate-900 border-2 border-slate-900 px-8 md:px-10 py-4 rounded-2xl font-bold text-center hover:bg-slate-50 transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:scale-95 text-lg md:text-xl"
                 >
-                  Get in Touch
+                  Let's Connect
                 </a>
               </div>
             </div>
@@ -63,7 +70,7 @@ const HomePage: React.FC = () => {
           >
             <div className="space-y-4 max-w-xs ml-auto">
               <div className="bg-brand-200 p-6 rounded-[30px] border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)] rotate-3 hover:rotate-0 transition-transform duration-500">
-                <p className="text-3xl font-black text-slate-900">2+ Years</p>
+                <p className="text-3xl font-black text-slate-900">3+ Years</p>
                 <p className="text-xs font-bold text-slate-700 uppercase tracking-widest">Experience</p>
               </div>
               <div className="bg-brand-400 p-6 rounded-[30px] border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)] -rotate-6 hover:rotate-0 transition-transform duration-500 ml-12">
@@ -207,8 +214,10 @@ const HomePage: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {JOY.map((item) => (
               <div key={item.title} className="group">
-                <div className="aspect-square rounded-3xl overflow-hidden border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] mb-6 bg-white">
-                  <img src={item.imageUrl} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <div className="aspect-square rounded-3xl overflow-hidden border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] mb-6 bg-white flex items-center justify-center group-hover:bg-brand-50 transition-colors">
+                  <div className="group-hover:scale-110 transition-transform">
+                    {iconMap[item.icon] || item.title.charAt(0)}
+                  </div>
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-sm md:text-base text-slate-600">{item.description}</p>
@@ -226,11 +235,11 @@ const HomePage: React.FC = () => {
               <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">About Me</h2>
               <div className="space-y-4 md:space-y-6 text-lg md:text-xl text-slate-700 leading-relaxed">
                 <p>
-                  I'm a Product Owner with a passion for building products that solve real problems. 
+                  I'm a Product Manager with a passion for building products that solve real problems. 
                   My approach is rooted in data, empathy, and a relentless focus on measurable impact.
                 </p>
                 <p>
-                  With over 2 years of experience in Fintech and eCommerce, I've led projects that 
+                  With over 3 years of experience in Fintech and eCommerce, I've led projects that 
                   significantly improved conversion rates, automated complex manual processes, and 
                   delivered seamless user experiences.
                 </p>
@@ -262,12 +271,23 @@ const HomePage: React.FC = () => {
             </div>
 
             <div className="relative mt-12 lg:mt-0">
-              <div className="aspect-square rounded-[40px] md:rounded-[60px] overflow-hidden border-2 border-slate-900 shadow-[10px_10px_0px_0px_rgba(249,115,22,0.5)]">
+              <div className="aspect-[3/4] rounded-[40px] md:rounded-[60px] overflow-hidden border-2 border-slate-900 shadow-[10px_10px_0px_0px_rgba(249,115,22,0.5)] bg-brand-100">
                 <img 
-                  src="https://picsum.photos/seed/pencil-sketch-profile/800/800?grayscale" 
+                  src="masechaba_optimized.png" 
                   alt="Masechaba Khoza" 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover transition-all duration-500 grayscale hover:grayscale-0"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={1067}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    if (!target.src.includes('picsum') && !target.src.includes('input_file_0')) {
+                      target.src = 'input_file_0.png';
+                    } else if (target.src.includes('input_file_0')) {
+                      target.src = 'https://picsum.photos/seed/masechaba/1200/1600?grayscale';
+                    }
+                  }}
                 />
               </div>
               <div className="absolute -bottom-4 md:-bottom-10 -left-4 md:-left-10 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl border-2 border-slate-900 shadow-xl max-w-[200px] md:max-w-xs">

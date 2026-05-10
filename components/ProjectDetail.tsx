@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
-import { ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ExternalLink, ChevronRight, GitMerge, PenTool, Layout, Gauge, PieChart, FileText } from 'lucide-react';
+import * as Icons from 'lucide-react';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,6 +24,20 @@ const ProjectDetail: React.FC = () => {
     );
   }
 
+  // @ts-ignore - dynamic icon access
+  const HeroIcon = Icons[project.icon] || Icons.Briefcase;
+
+  const getArtifactIcon = (type: string) => {
+    switch (type) {
+      case 'process-flow': return <GitMerge size={48} className="text-brand" />;
+      case 'sketch': return <PenTool size={48} className="text-brand" />;
+      case 'wireframe': return <Layout size={48} className="text-brand" />;
+      case 'dashboard': return <Gauge size={48} className="text-brand" />;
+      case 'analysis': return <PieChart size={48} className="text-brand" />;
+      default: return <FileText size={48} className="text-brand" />;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-brand-sand pt-32 pb-24">
       <div className="max-w-5xl mx-auto px-6">
@@ -30,7 +45,7 @@ const ProjectDetail: React.FC = () => {
           <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
           Back to Work
         </Link>
-
+        
         {/* Header */}
         <header className="mb-16">
           <p className="text-brand font-bold uppercase tracking-widest mb-4">{project.company}</p>
@@ -46,14 +61,17 @@ const ProjectDetail: React.FC = () => {
           </div>
         </header>
 
-        {/* Hero Image */}
-        <div className="aspect-video rounded-3xl overflow-hidden border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.2)] mb-20 bg-slate-200">
-          <img 
-            src={project.previewImage} 
-            alt={project.title} 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
+        {/* Hero Illustration */}
+        <div className="aspect-video rounded-3xl overflow-hidden border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(249,115,22,0.2)] mb-20 bg-brand-50 flex items-center justify-center p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand opacity-5 rounded-full -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand opacity-5 rounded-full -ml-32 -mb-32"></div>
+          <div className="text-center relative z-10">
+            <div className="w-32 h-32 bg-brand rounded-[40px] mx-auto mb-8 flex items-center justify-center text-white shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+               <HeroIcon size={64} strokeWidth={2.5} />
+            </div>
+            <p className="text-3xl font-black text-slate-900 uppercase tracking-[0.2em]">{project.title}</p>
+            <div className="w-24 h-1.5 bg-brand mx-auto mt-4 rounded-full"></div>
+          </div>
         </div>
 
         {/* Content Grid */}
@@ -108,10 +126,13 @@ const ProjectDetail: React.FC = () => {
                 <div className="grid gap-8">
                   {project.artifacts.map((artifact, i) => (
                     <div key={i} className="space-y-4">
-                      <div className="aspect-video rounded-2xl overflow-hidden border-2 border-slate-900 bg-slate-100">
-                        <img src={artifact.imageUrl} alt={artifact.label} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                      <div className="aspect-video rounded-2xl overflow-hidden border-2 border-slate-900 bg-white flex items-center justify-center group">
+                        <div className="text-center p-8 transition-transform group-hover:scale-110">
+                           {getArtifactIcon(artifact.type)}
+                           <p className="mt-4 text-brand font-black text-xl uppercase tracking-widest">{artifact.type.replace('-', ' ')}</p>
+                        </div>
                       </div>
-                      <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">{artifact.label} — {artifact.type}</p>
+                      <p className="text-sm font-bold text-slate-500 uppercase tracking-widest italic">{artifact.label}</p>
                     </div>
                   ))}
                 </div>

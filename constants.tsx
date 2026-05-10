@@ -13,12 +13,12 @@ export const PROJECTS: Project[] = [
     solution: "Redesigned the sign-up flow (Plans Page → Confirmation) with a clear progress bar, mobile-first UX, and automated re-engagement via a three-stream CRM email series.",
     implementation: "Coordinated a 5-team go-live (Product, Tech, CS, Logistics, CRM) over a 6-week window, including a robust rollback strategy and Day 0 monitoring.",
     results: "Achieved a peak ~9% conversion rate. Recovered 64 customers in the first week through automated abandonment series (~58% email open rate).",
+    icon: 'UserPlus',
     artifacts: [
-      { type: 'process-flow', imageUrl: '/input_file_1.png', label: 'Funnel Analysis' },
-      { type: 'wireframe', imageUrl: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop', label: 'Mobile-First UI' }
+      { type: 'process-flow', label: 'Funnel Analysis' },
+      { type: 'wireframe', label: 'Mobile-First UI' }
     ],
     backlog: ["Deep-dive mobile address UX", "A/B test abandonment email timing", "Resolve unsupported address waitlist"],
-    previewImage: "https://images.unsplash.com/photo-1551288049-bbda4833effb?q=80&w=800&auto=format&fit=crop",
     tags: ["Conversion", "Mobile UX", "CRM Automation"]
   },
   {
@@ -32,12 +32,12 @@ export const PROJECTS: Project[] = [
     solution: "Developed a RICE-prioritised roadmap of 8 must-have initiatives (M1-M8), sequenced across 4 waves focusing on self-service enablement, billing transparency, and delivery reliability.",
     implementation: "Produced a full 45-page PRD, Miro board plan, and stakeholder presentation for Exco sign-off. Managed cross-functional alignment across Engineering, Marketing, CX, and Operations.",
     results: "Secured business alignment for a major consumer-facing redesign. Identified pricing-driven pauses (5.5x surge) as a leading churn indicator.",
+    icon: 'TrendingUp',
     artifacts: [
-      { type: 'process-flow', imageUrl: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=800&auto=format&fit=crop', label: 'Customer Journey Map' },
-      { type: 'dashboard', imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', label: 'Pain Point Matrix' }
+      { type: 'process-flow', label: 'Customer Journey Map' },
+      { type: 'dashboard', label: 'Pain Point Matrix' }
     ],
     backlog: ["Quarterly journey benchmarking", "Demographic data enrichment", "Post-delivery CSAT capture"],
-    previewImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     tags: ["Product Strategy", "Discovery", "Roadmapping"]
   },
   {
@@ -51,11 +51,11 @@ export const PROJECTS: Project[] = [
     solution: "Developed an automated uploader tool integrating Jira and Notion.",
     implementation: "Coming soon - Detailed implementation steps being documented.",
     results: "Coming soon - Post-launch metrics.",
+    icon: 'Zap',
     artifacts: [
-      { type: 'process-flow', imageUrl: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop', label: 'Automation Flow' }
+      { type: 'process-flow', label: 'Automation Flow' }
     ],
     backlog: ["Integration with supplier portal"],
-    previewImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop",
     tags: ["Automation", "Internal Tools"]
   },
   {
@@ -69,11 +69,11 @@ export const PROJECTS: Project[] = [
     solution: "Integrated Yoyo Rewards API for seamless point earning and redemption.",
     implementation: "Coming soon - Technical integration details.",
     results: "Coming soon - Post-launch metrics.",
+    icon: 'Gift',
     artifacts: [
-      { type: 'other', imageUrl: 'https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=800&auto=format&fit=crop', label: 'Loyalty Rewards' }
+      { type: 'other', label: 'Loyalty Rewards' }
     ],
     backlog: ["Tiered rewards system"],
-    previewImage: "https://images.unsplash.com/photo-1551288049-bbda4833effb?q=80&w=800&auto=format&fit=crop",
     tags: ["Loyalty", "API Integration"]
   },
   {
@@ -87,11 +87,11 @@ export const PROJECTS: Project[] = [
     solution: "Built a centralized Knowledge Hub using Notion and custom internal tools.",
     implementation: "Coming soon - Content strategy and tool selection.",
     results: "Coming soon - Internal satisfaction scores.",
+    icon: 'Library',
     artifacts: [
-      { type: 'other', imageUrl: 'https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=800&auto=format&fit=crop', label: 'Knowledge Architecture' }
+      { type: 'other', label: 'Knowledge Architecture' }
     ],
     backlog: ["Search optimization"],
-    previewImage: "https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=800&auto=format&fit=crop",
     tags: ["Documentation", "Product Ops"]
   },
   {
@@ -105,11 +105,11 @@ export const PROJECTS: Project[] = [
     solution: "Designed a bulk payout API and dashboard for enterprise clients.",
     implementation: "Coming soon - API design and security protocols.",
     results: "Coming soon - Adoption rates among enterprise clients.",
+    icon: 'Layers',
     artifacts: [
-      { type: 'dashboard', imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda4833effb?q=80&w=800&auto=format&fit=crop', label: 'Payout Dashboard' }
+      { type: 'dashboard', label: 'Payout Dashboard' }
     ],
     backlog: ["Scheduled payouts"],
-    previewImage: "https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=800&auto=format&fit=crop",
     tags: ["Fintech", "B2B", "API"]
   },
   {
@@ -123,11 +123,11 @@ export const PROJECTS: Project[] = [
     solution: "Developed a real-time refund product using instant EFT technology.",
     implementation: "Coming soon - Banking integration details.",
     results: "40% reduction in refund-related support tickets.",
+    icon: 'RotateCcw',
     artifacts: [
-      { type: 'process-flow', imageUrl: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800&auto=format&fit=crop', label: 'Refund Flow' }
+      { type: 'process-flow', label: 'Refund Flow' }
     ],
     backlog: ["Automated partial refunds"],
-    previewImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop",
     tags: ["Payments", "CX"]
   },
   {
@@ -141,11 +141,11 @@ export const PROJECTS: Project[] = [
     solution: "Created a voucher API and management interface.",
     implementation: "Coming soon - Figma prototypes and requirements.",
     results: "Coming soon - Successful pilot program results.",
+    icon: 'Ticket',
     artifacts: [
-      { type: 'other', imageUrl: 'https://images.unsplash.com/photo-1550565118-3d1428df732e?q=80&w=800&auto=format&fit=crop', label: 'Voucher Engine' }
+      { type: 'other', label: 'Voucher Engine' }
     ],
     backlog: ["Multi-currency support"],
-    previewImage: "https://images.unsplash.com/photo-1556742049-1347356a65ec?q=80&w=800&auto=format&fit=crop",
     tags: ["API", "Prototyping"]
   },
   {
@@ -159,11 +159,11 @@ export const PROJECTS: Project[] = [
     solution: "Seamless integration with Absa's API for real-time transaction verification.",
     implementation: "Coming soon - Security and compliance handling.",
     results: "Coming soon - Performance metrics.",
+    icon: 'Landmark',
     artifacts: [
-      { type: 'other', imageUrl: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop', label: 'API Integration' }
+      { type: 'other', label: 'API Integration' }
     ],
     backlog: ["Support for more banking features"],
-    previewImage: "https://images.unsplash.com/photo-1611095773164-1c586940807b?q=80&w=800&auto=format&fit=crop",
     tags: ["Banking", "Integration"]
   },
   {
@@ -177,11 +177,11 @@ export const PROJECTS: Project[] = [
     solution: "Developed a custom WordPress/WooCommerce site with localized logistics, payments, and delivery. Refined checkout fields and navigation hierarchy based on behavioral inference.",
     implementation: "Founder-led implementation managing WooCommerce architecture, plugin debugging, and cross-system integration (logistics + product).",
     results: "Validated product-market fit via Lean MVP, transitioning from simple sales to a managed marketplace model.",
+    icon: 'Globe',
     artifacts: [
-      { type: 'process-flow', imageUrl: 'https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?q=80&w=800&auto=format&fit=crop', label: 'Operational Workflows' }
+      { type: 'process-flow', label: 'Operational Workflows' }
     ],
     backlog: ["Formal analytics instrumentation", "Enterprise stakeholder storytelling", "Marketplace expansion"],
-    previewImage: "https://images.unsplash.com/photo-1441984969816-3537ecac4ccc?q=80&w=800&auto=format&fit=crop",
     tags: ["0-to-1", "WooCommerce", "Circular Economy"]
   },
   {
@@ -195,11 +195,11 @@ export const PROJECTS: Project[] = [
     solution: "Built an AI-assisted ingestion pipeline using Gemini API to convert product images into structured WooCommerce-ready data.",
     implementation: "Designed and implemented automated workflows for content generation and image-to-product-detail pipelines.",
     results: "Enabled rapid catalog expansion through AI-native workflow design and reduced manual processing time.",
+    icon: 'Bot',
     artifacts: [
-      { type: 'process-flow', imageUrl: '/input_file_0.png', label: 'AI Workflow' }
+      { type: 'process-flow', label: 'AI Workflow' }
     ],
     backlog: ["Automated pricing suggestions", "Batch processing improvements"],
-    previewImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop",
     tags: ["AI-Native", "Automation", "Scalability"]
   }
 ];
@@ -285,21 +285,21 @@ export const JOY: JoyItem[] = [
   {
     title: "Podcast",
     description: "Exploring stories and insights through audio storytelling.",
-    imageUrl: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=600&auto=format&fit=crop"
+    icon: 'Mic'
   },
   {
     title: "Thrifting",
     description: "Finding unique pre-loved treasures and promoting sustainable fashion.",
-    imageUrl: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop"
+    icon: 'Shirt'
   },
   {
     title: "Retro Gaming",
     description: "Reliving the classics and appreciating the history of game design.",
-    imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop"
+    icon: 'Gamepad'
   },
   {
     title: "Whimsical Mug Collection",
     description: "Collecting mugs that bring a little extra joy to every cup of coffee.",
-    imageUrl: "https://images.unsplash.com/photo-1542556637372-af8247078351?q=80&w=600&auto=format&fit=crop"
+    icon: 'Coffee'
   }
 ];
