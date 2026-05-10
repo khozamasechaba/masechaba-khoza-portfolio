@@ -151,7 +151,7 @@ const ProjectDetail: React.FC = () => {
                 <div className="space-y-6">
                   <div>
                     <p className="text-xs font-bold text-slate-400 uppercase mb-1">Role</p>
-                    <p className="text-slate-900 font-medium">Product Owner</p>
+                    <p className="text-slate-900 font-medium">Product Manager</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold text-slate-400 uppercase mb-1">Company</p>

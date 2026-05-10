@@ -11,7 +11,7 @@ export interface Project {
   implementation: string;
   results: string;
   artifacts: {
-    type: 'process-flow' | 'sketch' | 'wireframe' | 'other';
+    type: 'process-flow' | 'sketch' | 'wireframe' | 'dashboard' | 'analysis' | 'other';
     imageUrl: string;
     label: string;
   }[];

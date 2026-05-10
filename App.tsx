@@ -12,7 +12,7 @@ import { Mail, Linkedin, Briefcase, Heart, User, Award, ChevronRight } from 'luc
 const HomePage: React.FC = () => {
   // Hand-picked featured projects for a diverse showcase
   const featuredProjects = React.useMemo(() => {
-    const featuredIds = ['ucook-signup', 'ozow-refunds', 'thrift-yours-ai', 'ozow-bulk'];
+    const featuredIds = ['ucook-cj-optimization', 'ucook-signup', 'thrift-yours-ai', 'ozow-refunds'];
     return featuredIds
       .map(id => PROJECTS.find(p => p.id === id))
       .filter((p): p is typeof PROJECTS[0] => p !== undefined);
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
                 <span className="text-brand">I drive measurable impact</span> through data-driven product decisions.
               </p>
               <p className="text-base md:text-lg text-slate-600 font-medium italic">
-                Product Owner
+                Product Manager
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-6">
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
           <div className="mb-16 md:mb-20">
             <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-4 md:mb-6 tracking-tighter">Skills</h2>
             <p className="text-lg md:text-xl text-slate-500 max-w-2xl">
-              Relevant product skills and certifications that drive measurable results.
+              Relevant product skills, qualifications, and honors that drive measurable results.
             </p>
           </div>
 
@@ -253,6 +253,10 @@ const HomePage: React.FC = () => {
                 <div className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-brand-50 rounded-full border-2 border-brand-200 text-brand-900 font-bold text-sm md:text-base">
                   <Heart className="w-4 h-4 md:w-5 md:h-5" />
                   User-Centric
+                </div>
+                <div className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-brand-50 rounded-full border-2 border-brand-200 text-brand-900 font-bold text-sm md:text-base">
+                  <Award className="w-4 h-4 md:w-5 md:h-5" />
+                  CS & Computer Engineering
                 </div>
               </div>
             </div>
